@@ -31,7 +31,7 @@
 
 ## Final Review ##
 The final goal was to create Basic Blockchain with Merkle Tree. 
-We did it by using internet resources to understand blockchain principles, and our technological stack was Python.
+We did it by using internet resources to understand blockchain principles, and our technological stack was Python. <br>
 **Libraries**: time, hashlib 
 
   
