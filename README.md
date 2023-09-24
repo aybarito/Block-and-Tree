@@ -28,4 +28,10 @@
   * **Transactions**
   * **Immutability**
   * **Network Protocol**
+
+## Final Review ##
+The final goal was to create Basic Blockchain with Merkle Tree. 
+We did it by using internet resources to understand blockchain principles, and our technological stack was Python.
+**Libraries**: time, hashlib 
+
   
