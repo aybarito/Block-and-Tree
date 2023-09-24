@@ -15,6 +15,30 @@ class Block:
         data = str(self.index) + str(self.timestamp) + str(self.previous_hash) + str(self.transactions)
         return hashlib.sha256(data.encode()).hexdigest()
 
+class MerkleTree:
+    def init(self, transactions):
+        self.transactions = transactions
+        self.root = self.build_merkle_tree()
+
+    def build_merkle_tree(self):
+        if len(self.transactions) == 0:
+            return None
+
+        if len(self.transactions) == 1:
+            return self.transactions[0]
+
+        new_transactions = []
+        for i in range(0, len(self.transactions), 2):
+            transaction1 = self.transactions[i]
+            if i + 1 < len(self.transactions):
+                transaction2 = self.transactions[i + 1]
+            else:
+                transaction2 = transaction1  # Duplicate for odd number of transactions
+            combined = transaction1 + transaction2
+            new_transactions.append(hashlib.sha256(combined.encode()).hexdigest())
+
+        return self.build_merkle_tree(new_transactions)
+
 class Blockchain:
     def create_genesis_block(self):
         return Block(0, "0", ["Genesis Block"])  # Initialize index and transactions for the genesis block
