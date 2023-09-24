@@ -1,2 +1,2 @@
-# Block-and-Tree
-we gooood
+# Blockchain Technologies Assignment: Implementing a Basic Blockchain with Merkle Tree
+
