@@ -3,7 +3,7 @@ import time
 from block import Block, Blockchain, MerkleTree
 
 def main():
-    blockchain = Blockchain()  # Rename the variable
+    blockchain = Blockchain()
 
     while True:
         print("1. Add transactions")
